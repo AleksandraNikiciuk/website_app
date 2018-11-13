@@ -13,19 +13,48 @@ body {
 }
 
 .main_slide {
-    background-color: #f3f0ed;
-    position: fixed;
-    top: 0;
-    width: 50%;
-    height: 100%;
-    z-index: -10;
+    // background-color: #f3f0ed;
+    // position: fixed;
+    // top: 0;
+    // width: 50%;
+    // height: 100%;
+    // z-index: -10;
     .left-slide {
+        background-color: #f3f0ed;
+        position: fixed;
+        top: 0;
+        width: 50%;
+        height: 100%;
+        z-index: -10;
         left: 0;
-        transform: matrix(1, 0, 0, 1, 0, 0);
+        // transform: matrix(1, 0, 0, 1, 0, 0);
+        transform: translate(0, 100vh);
+        animation: slide1 2s 1 forwards;
+        color: red;
     }
     .right-slide {
+        background-color: #f3f0ed;
+        position: fixed;
+        top: 0;
+        width: 50%;
+        height: 100%;
+        z-index: -10;
         left: 50%;
-        transform: matrix(1, 0, 0, 1, 0, 0);
+        // transform: matrix(1, 0, 0, 1, 0, 0);
+        transform: translate(0, -100vh);
+        animation: slide2 2s 1 forwards;
+    }
+}
+
+@keyframes slide1 {
+    100% {
+        transform: translate(0, 0);
+    }
+}
+ 
+@keyframes slide2 {
+    100% {
+        transform: translate(0, 0);
     }
 }
 
